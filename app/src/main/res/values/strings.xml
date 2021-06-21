@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">preactica_dialogos</string>
+    <string name="dialog_title">Mostrar Mensaje de Bienvenida</string>
+    <string name="dialog_title2">Captura tu correo</string>
+    <string name="dialog_positive">Guardar Seleccion</string>
+    <string name="dialog_negative">Cancelar</string>
+    <string name="dialog_message">Bienvenido a la aplicacion de dialogos. En esta aplicacion podras aprender como utilizar dialogos</string>
+    <string name="bt_dialogo">Mostrar Mensaje</string>
+    <string name="bt_dialogo2">Capturar correo electronico</string>
+    <string name="bt_dialogo3">Mostrar dialogo personalizado</string>
+
+
+
+
+</resources>
