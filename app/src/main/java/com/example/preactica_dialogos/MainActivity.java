@@ -127,7 +127,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (which) {
                     case 0: visto= false;
                     break;
-                    case 1:
+                    case 1:if (visto==false){
+                        visto=false;
+                    }else {visto=true;}
                         break;
                     case 2: visto=true;
                     break;
