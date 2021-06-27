@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_dialogo2"
+            android:background="@drawable/btn_selector4"
             />
 
         <Button
@@ -30,18 +31,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_dialogo3"
+            android:background="@drawable/btn_selector3"
             />
         <Button
             android:id="@+id/ver_toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_dialogo4"
+            android:background="@drawable/btn_selector2"
             />
         <Button
             android:id="@+id/ver_toastp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_dialogo5"
+            android:background="@drawable/btn_selector"
             />
 
     </LinearLayout>
