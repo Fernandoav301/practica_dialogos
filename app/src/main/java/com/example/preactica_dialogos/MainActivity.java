@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button mostrar, cap_correo, mostrar_personalizado;
+    Button mostrar, cap_correo, mostrar_personalizado, mostrar_toast, mostrar_toastp;
     private Boolean visto;
 
     @Override
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         mostrar=(Button)findViewById(R.id.ver_mensaje);
         cap_correo=(Button)findViewById(R.id.capturar_correo);
         mostrar_personalizado=(Button)findViewById(R.id.ver_mensaje_personalizado);
+        mostrar_toast=(Button)findViewById(R.id.ver_toast);
+        mostrar_toastp=(Button)findViewById(R.id.ver_toastp);
 
         visto=false;
 
@@ -45,7 +48,25 @@ public class MainActivity extends AppCompatActivity {
                 mostrarDialogoPersonalizado();
             }
         });
+        mostrar_toast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VerToast();
+            }
+        });
+        mostrar_toastp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarToastPersonalizada();
+            }
+        });
         }
+
+        private void VerToast(){
+           Toast.makeText(getApplicationContext(), "Este es un simple mensaje", Toast.LENGTH_LONG).show();
+        }
+
+
 
         private void mostrarDialogoPersonalizado() {
                AlertDialog.Builder alert = new AlertDialog.Builder( MainActivity.this);
@@ -61,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                    public void onClick(DialogInterface dialog, int which) {
                        String name = nombre.getText().toString();
                        String email = mail.getText().toString();
-                       mostrarToast();
+                       //mostrarToast();
                        //Toast.makeText(getApplicationContext(), "Seguardo: "+name+email,Toast.LENGTH_LONG).show();
                    }
 
@@ -70,10 +91,14 @@ public class MainActivity extends AppCompatActivity {
                dialog.show();
         }
 
-        private void mostrarToast() {
+        private void mostrarToastPersonalizada() {
         Toast toast= new Toast(this);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 50);
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.toast_loyaut, null);
+        toast.setView(view);
+        toast.show();
 
         }
 

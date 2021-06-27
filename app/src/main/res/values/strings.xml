@@ -8,6 +8,9 @@
     <string name="bt_dialogo">Mostrar Mensaje</string>
     <string name="bt_dialogo2">Capturar correo electronico</string>
     <string name="bt_dialogo3">Mostrar dialogo personalizado</string>
+    <string name="bt_dialogo4">Mostrar Toast</string>
+    <string name="bt_dialogo5">Mostrar Toast personalizado</string>
+
 
 
 
